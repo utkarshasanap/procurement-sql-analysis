@@ -1,0 +1,55 @@
+-- Q1. Total spend per category (PO value)
+['category', 'po_count', 'total_spend']
+('Raw Materials', 319, 8198899.21)
+('Office Supplies', 241, 6146782.65)
+('Facilities', 243, 5972867.79)
+('Marketing', 241, 5947348.76)
+('Logistics', 219, 5858511.14)
+('IT Services', 237, 5846970.14)
+
+-- Q2. Top 5 suppliers by spend
+['supplier_name', 'total_spend']
+('Crest Systems 10', 361614.09)
+('Orion Group 19', 361260.36)
+('Summit Solutions 20', 351594.09)
+('Crest Systems 17', 346987.6)
+('Bluewave Solutions 7', 346778.7)
+
+-- Q3. Duplicate suppliers (same name more than once)
+['supplier_name', 'occurrences']
+('Apex Supplies 1', 2)
+('Bluewave Industries 9', 2)
+('Nova Logistics 11', 2)
+('Nova Systems 24', 2)
+('Orion Group 21', 2)
+('Sterling Enterprises 4', 2)
+('Sterling Solutions 5', 2)
+('Sterling Supplies 10', 2)
+('Sterling Systems 2', 2)
+('Vertex Industries 27', 2)
+('Zenith Industries 25', 2)
+('Zenith Solutions 23', 2)
+
+-- Q4. Missing values (data validation)
+['missing_email', 'missing_payment_terms']
+(10, 8)
+
+-- Q5. Migration check: row counts
+['legacy_count', 'new_count']
+(212, 205)
+
+-- Q6. Migration check: records in legacy but missing in new
+['missing_in_new']
+(7,)
+
+-- Q7. Migration check: records present in both but with field mismatches
+['mismatched_records']
+(11,)
+
+-- Q8. POs with no invoice
+['pos_without_invoice']
+(150,)
+
+-- Q9. PO vs invoice amount mismatch
+['amount_mismatches']
+(96,)
